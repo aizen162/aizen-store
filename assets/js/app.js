@@ -9,7 +9,7 @@
    Example for Pakistan: "923001234567"
 ------------------------------------------------------------ */
 const CONFIG = {
-  whatsappNumber: "923335017388", // <-- PLACEHOLDER: replace with your real WhatsApp number
+  whatsappNumber: "923335017388", // <-- User's WhatsApp Business number (set 2026-10-03)
   currency: "Rs",
   freeShippingOver: 5000,
   shippingFee: 250,
@@ -251,8 +251,10 @@ async function initCart() {
       wrap.innerHTML = `<div class="empty-state"><div class="big">🛒</div><h2>Your cart is empty</h2><p style="margin:10px 0 24px">Looks like you haven't added anything yet.</p><a class="btn" href="shop.html">Browse Products</a></div>`;
       return;
     }
+    const PHYSICAL_CATS = ["physical-trading", "physical-gym"];
+    const hasPhysical = items.some((i) => PHYSICAL_CATS.includes(i.p.category));
     const subtotal = items.reduce((a, i) => a + i.p.price * i.qty, 0);
-    const shipping = subtotal >= CONFIG.freeShippingOver ? 0 : CONFIG.shippingFee;
+    const shipping = hasPhysical ? (subtotal >= CONFIG.freeShippingOver ? 0 : CONFIG.shippingFee) : 0;
     const total = subtotal + shipping;
     wrap.innerHTML = `
     <div class="cart-layout">
@@ -274,17 +276,19 @@ async function initCart() {
       <div class="cart-summary">
         <h3>Order Summary</h3>
         <div class="sum-row"><span>Subtotal</span><span>${fmt(subtotal)}</span></div>
-        <div class="sum-row"><span>Shipping</span><span>${shipping === 0 ? "FREE 🎉" : fmt(shipping)}</span></div>
-        ${shipping > 0 ? `<div class="free-ship">Add ${fmt(CONFIG.freeShippingOver - subtotal)} more to unlock <b>FREE shipping</b> 🚚</div>` : ""}
+        <div class="sum-row"><span>Shipping</span><span>${!hasPhysical ? "Digital ⚡" : shipping === 0 ? "FREE 🎉" : fmt(shipping)}</span></div>
+        ${hasPhysical && shipping > 0 ? `<div class="free-ship">Add ${fmt(CONFIG.freeShippingOver - subtotal)} more to unlock <b>FREE shipping</b> 🚚</div>` : ""}
         <div class="sum-row total"><span>Total</span><span class="t-price">${fmt(total)}</span></div>
         <form class="checkout-form" id="checkout-form">
           <h4>Delivery Details</h4>
           <div class="field"><label>Full Name *</label><input name="name" required placeholder="e.g. Ali Raza"></div>
           <div class="field"><label>Phone / WhatsApp *</label><input name="phone" required placeholder="03XX XXXXXXX"></div>
+          ${hasPhysical ? `
           <div class="field"><label>Address *</label><textarea name="address" rows="2" required placeholder="House, street, area"></textarea></div>
-          <div class="field"><label>City *</label><input name="city" required placeholder="e.g. Lahore"></div>
+          <div class="field"><label>City *</label><input name="city" required placeholder="e.g. Lahore"></div>` : `
+          <div class="delivery-note">⚡ <b>Digital delivery</b> — no shipping needed. Your download links and access details will be sent after your order is confirmed on WhatsApp.</div>`}
           <button type="submit" class="btn wa-btn btn-block" style="margin-top:6px">📲 Order via WhatsApp</button>
-          <p class="form-note">You'll be redirected to WhatsApp with your order pre-written. Pay cash on delivery (physical) or get instant access (digital).</p>
+          <p class="form-note">${hasPhysical ? "You'll be redirected to WhatsApp with your order pre-written. Pay cash on delivery." : "You'll be redirected to WhatsApp with your order pre-written. Get instant access after confirmation."}</p>
         </form>
       </div>
     </div>`;
@@ -295,19 +299,22 @@ async function initCart() {
       e.preventDefault();
       const fd = new FormData(e.target);
       const lines = items.map((i, n) => `${n + 1}. ${i.p.name} x${i.qty} — ${fmt(i.p.price * i.qty)}`);
+      const shipLine = !hasPhysical ? "Digital (no shipping)" : shipping === 0 ? "FREE" : fmt(shipping);
+      const addrLines = hasPhysical
+        ? `📍 Address: ${fd.get("address")}\n🏙️ City: ${fd.get("city")}`
+        : `📦 Delivery: Digital`;
       const msg =
 `🛍️ *NEW ORDER — AIZEN STORE*
 --------------------------
 ${lines.join("\n")}
 --------------------------
 Subtotal: ${fmt(subtotal)}
-Shipping: ${shipping === 0 ? "FREE" : fmt(shipping)}
+Shipping: ${shipLine}
 *Total: ${fmt(total)}*
 
 👤 Name: ${fd.get("name")}
 📞 Phone: ${fd.get("phone")}
-📍 Address: ${fd.get("address")}
-🏙️ City: ${fd.get("city")}`;
+${addrLines}`;
       window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`, "_blank");
       toast("Opening WhatsApp… send the message to confirm your order ✅");
     });
