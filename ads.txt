@@ -1,0 +1,7 @@
+# ads.txt — Aizen Store
+# Replace PUBLISHER_ID_HERE with your Google AdSense publisher ID
+# after your AdSense account is approved.
+# Format: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# PLACEHOLDER — paste your real line below:
+# google.com, pub-PUBLISHER_ID_HERE, DIRECT, f08c47fec0942fa0
