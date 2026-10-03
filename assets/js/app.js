@@ -9,7 +9,7 @@
    Example for Pakistan: "923001234567"
 ------------------------------------------------------------ */
 const CONFIG = {
-  whatsappNumber: "920000000000", // <-- PLACEHOLDER: replace with your real WhatsApp number
+  whatsappNumber: "923335017388", // <-- PLACEHOLDER: replace with your real WhatsApp number
   currency: "Rs",
   freeShippingOver: 5000,
   shippingFee: 250,
