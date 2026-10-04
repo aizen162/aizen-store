@@ -80,6 +80,16 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.25;letter-spacing:-.01em}
 .nav-links a{padding:9px 14px;border-radius:8px;font-weight:600;font-size:.93rem;color:var(--muted);transition:.15s}
 .nav-links a:hover{color:var(--text);background:var(--card-2)}
 .nav-links a.active{color:var(--gold-soft)}
+.nav-drop{position:relative}
+.nav-drop .drop-toggle{padding:9px 14px;border-radius:8px;font-weight:600;font-size:.93rem;color:var(--muted);transition:.15s;display:inline-block;cursor:pointer}
+.nav-drop .drop-toggle:hover{color:var(--text);background:var(--card-2)}
+.drop-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:220px;background:var(--card);border:1px solid var(--border);border-radius:12px;box-shadow:0 14px 36px rgba(0,0,0,.4);padding:6px;display:none;z-index:60}
+.nav-drop:hover .drop-menu{display:block}
+.drop-menu a{display:block;padding:10px 12px;border-radius:8px;font-weight:600;font-size:.9rem;color:var(--muted)}
+.drop-menu a:hover{color:var(--text);background:var(--card-2)}
+.course-sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:34px 0 6px}
+.course-sec-head h2{margin:0}
+.result-count.dim{opacity:.75}
 .nav-actions{display:flex;align-items:center;gap:10px}
 .cart-btn{position:relative;display:flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--card);font-weight:700;font-size:.9rem;transition:.15s;color:var(--silver)}
 .cart-btn:hover{border-color:var(--gold);box-shadow:var(--glow)}
@@ -369,6 +379,9 @@ footer{border-top:1px solid var(--border);background:var(--bg-soft);margin-top:0
     background:var(--bg-soft);border-bottom:1px solid var(--border);padding:12px;gap:2px;
   }
   .nav-links.open{display:flex}
+  .nav-drop{width:100%}
+  .nav-drop .drop-toggle{width:100%}
+  .drop-menu{position:static;display:block;background:none;border:none;box-shadow:none;padding:2px 0 4px 16px}
   .hamburger{display:block}
   .cat-grid{grid-template-columns:1fr}
   .blog-grid,.testi-grid,.perks{grid-template-columns:1fr}
