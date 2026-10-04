@@ -214,7 +214,7 @@ async function initProduct() {
           <p class="pd-desc">${esc(p.description)}</p>
           <ul class="pd-features">${p.features.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
           ${isDigital
-            ? `<div class="delivery-note">⚡ <b>Instant digital delivery</b> — download link + access details are emailed right after your order is confirmed on WhatsApp.</div>`
+            ? `<div class="delivery-note">⚡ <b>Instant digital delivery</b> — download link + access details are shared with you on WhatsApp right after your order is confirmed.</div>`
             : `<div class="delivery-note">📦 <b>Cash on Delivery available</b> — ships across Pakistan in 3–5 working days. Shipping ${fmt(CONFIG.shippingFee)} · FREE on orders over ${fmt(CONFIG.freeShippingOver)}.</div>`}
           <div class="qty-row">
             <div class="qty"><button id="q-minus" aria-label="decrease">−</button><span id="q-val">1</span><button id="q-plus" aria-label="increase">+</button></div>
