@@ -81,7 +81,7 @@
   },
   {
     "badge": "Bestseller",
-    "category": "courses",
+    "category": "trading-courses",
     "description": "Our flagship 40+ lesson video course: market structure, liquidity, order blocks, fair value gaps, premium & discount, and full trade planning from higher timeframe down to entry. Includes live trade breakdowns and quizzes.",
     "features": [
       "40+ HD video lessons (12 hours)",
@@ -97,11 +97,12 @@
     "price": 29.99,
     "rating": 4.9,
     "reviews": 421,
-    "slug": "smc-mastery-course"
+    "slug": "smc-mastery-course",
+    "topic": "smc"
   },
   {
     "badge": null,
-    "category": "courses",
+    "category": "trading-courses",
     "description": "Ditch the indicator soup. Learn to read raw price: candlestick behaviour at key levels, support/resistance flips, false breakouts and clean entry triggers on any timeframe. 25 lessons with real chart walkthroughs.",
     "features": [
       "25 video lessons (8 hours)",
@@ -117,11 +118,12 @@
     "price": 24.99,
     "rating": 4.8,
     "reviews": 287,
-    "slug": "price-action-pro"
+    "slug": "price-action-pro",
+    "topic": "price-action"
   },
   {
     "badge": "New",
-    "category": "courses",
+    "category": "trading-courses",
     "description": "The course that saves accounts. Position sizing, the 1% rule done right, drawdown recovery math, psychology guardrails and building a personal risk plan. Short, intense, and the highest-rated course in the store.",
     "features": [
       "18 focused video lessons (5 hours)",
@@ -137,11 +139,12 @@
     "price": 19.99,
     "rating": 5.0,
     "reviews": 156,
-    "slug": "risk-management-masterclass"
+    "slug": "risk-management-masterclass",
+    "topic": ""
   },
   {
     "badge": null,
-    "category": "courses",
+    "category": "trading-courses",
     "description": "From zero to your first disciplined futures trade. Leverage, liquidation math, funding rates, exchange setup and a conservative futures strategy with strict risk caps. Built for beginners who want to avoid the classic blow-ups.",
     "features": [
       "30 video lessons (9 hours)",
@@ -157,7 +160,8 @@
     "price": 24.99,
     "rating": 4.7,
     "reviews": 193,
-    "slug": "crypto-futures-bootcamp"
+    "slug": "crypto-futures-bootcamp",
+    "topic": ""
   },
   {
     "badge": null,
@@ -323,7 +327,7 @@
     "id": "p17",
     "name": "Guardeer Whale Eyes — Complete Trading Course",
     "slug": "guardeer-whale-eyes",
-    "category": "courses",
+    "category": "trading-courses",
     "price": 9.99,
     "oldPrice": 19.99,
     "badge": "New",
@@ -348,13 +352,14 @@
       "🔒 Lesson 14 – SB with Structure",
       "🔒 Lesson 15 – Distortion"
     ],
-    "previewVideo": "https://drive.google.com/file/d/1YvZXvQnbiCB6m4NZ_rez-RTkF4czseu5/preview"
+    "previewVideo": "https://drive.google.com/file/d/1YvZXvQnbiCB6m4NZ_rez-RTkF4czseu5/preview",
+    "topic": "smc"
   },
   {
     "id": "p18",
     "name": "Guardeer La Plata System — Complete Trading Course",
     "slug": "guardeer-la-plata-system",
-    "category": "courses",
+    "category": "trading-courses",
     "price": 9.99,
     "oldPrice": 19.99,
     "rating": 5.0,
@@ -375,6 +380,7 @@
       "🔒 Lecture 8",
       "🔒 Lecture 9"
     ],
-    "previewVideo": "https://drive.google.com/file/d/11xcqXoUKx3dUyL8b6aAHndTWUXB2kG8n/preview"
+    "previewVideo": "https://drive.google.com/file/d/11xcqXoUKx3dUyL8b6aAHndTWUXB2kG8n/preview",
+    "topic": ""
   }
 ]
