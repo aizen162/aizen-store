@@ -212,7 +212,8 @@ async function initProduct() {
           <div class="pd-rating"><span class="rating">${stars(p.rating)}</span><span>${p.rating} · ${p.reviews} reviews</span></div>
           <div class="pd-price"><span class="price">${fmt(p.price)}</span>${p.oldPrice ? `<span class="old-price">${fmt(p.oldPrice)}</span><span class="save-tag">SAVE ${save}%</span>` : ""}</div>
           <p class="pd-desc">${esc(p.description)}</p>
-          <ul class="pd-features">${p.features.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
+          ${p.previewVideo ? `<div class="preview-wrap"><h3>🎬 Free preview — Lesson 1</h3><div class="video-frame"><iframe src="${esc(p.previewVideo)}" allow="autoplay; encrypted-media" allowfullscreen loading="lazy" title="Free preview"></iframe></div></div>` : ""}
+          <ul class="pd-features">${p.features.map((f) => { const locked = f.startsWith("🔒"); const t = locked ? f.replace(/^🔒\s*/, "") : f; return `<li class="${locked ? "locked" : ""}">${esc(t)}</li>`; }).join("")}</ul>
           ${isDigital
             ? `<div class="delivery-note">⚡ <b>Instant digital delivery</b> — download link + access details are shared with you on WhatsApp right after your order is confirmed.</div>`
             : `<div class="delivery-note">📦 <b>Cash on Delivery available</b> — ships across Pakistan in 3–5 working days. Shipping ${fmt(CONFIG.shippingFee)} · FREE on orders over ${fmt(CONFIG.freeShippingOver)}.</div>`}
