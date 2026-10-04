@@ -181,7 +181,8 @@
     "price": 12.5,
     "rating": 4.8,
     "reviews": 96,
-    "slug": "trading-desk-mat"
+    "slug": "trading-desk-mat",
+    "available": false
   },
   {
     "badge": null,
@@ -201,7 +202,8 @@
     "price": 4.99,
     "rating": 4.9,
     "reviews": 210,
-    "slug": "candlestick-poster"
+    "slug": "candlestick-poster",
+    "available": false
   },
   {
     "badge": null,
@@ -221,7 +223,8 @@
     "price": 2.99,
     "rating": 4.7,
     "reviews": 143,
-    "slug": "traders-coffee-mug"
+    "slug": "traders-coffee-mug",
+    "available": false
   },
   {
     "badge": "New",
@@ -241,7 +244,8 @@
     "price": 17.99,
     "rating": 4.6,
     "reviews": 58,
-    "slug": "candlestick-led-lamp"
+    "slug": "candlestick-led-lamp",
+    "available": false
   },
   {
     "badge": "Bestseller",
@@ -261,7 +265,8 @@
     "price": 3.99,
     "rating": 4.8,
     "reviews": 176,
-    "slug": "gym-shaker"
+    "slug": "gym-shaker",
+    "available": false
   },
   {
     "badge": null,
@@ -281,7 +286,8 @@
     "price": 3.99,
     "rating": 4.9,
     "reviews": 231,
-    "slug": "resistance-bands"
+    "slug": "resistance-bands",
+    "available": false
   },
   {
     "badge": null,
@@ -301,7 +307,8 @@
     "price": 11.99,
     "rating": 4.7,
     "reviews": 84,
-    "slug": "lifting-belt"
+    "slug": "lifting-belt",
+    "available": false
   },
   {
     "badge": null,
@@ -321,7 +328,8 @@
     "price": 13.99,
     "rating": 4.8,
     "reviews": 119,
-    "slug": "gym-duffel"
+    "slug": "gym-duffel",
+    "available": false
   },
   {
     "id": "p17",
