@@ -318,5 +318,25 @@
     "rating": 4.8,
     "reviews": 119,
     "slug": "gym-duffel"
+  },
+  {
+    "id": "p17",
+    "name": "Guardeer Whale Eyes — Complete Trading Course",
+    "slug": "guardeer-whale-eyes",
+    "category": "courses",
+    "price": 9.99,
+    "oldPrice": 19.99,
+    "badge": "New",
+    "rating": 5.0,
+    "reviews": 6,
+    "image": "assets/img/p17.jpg",
+    "description": "Guardeer Whale Eyes is the founder's complete video trading course: learn to read the market like a whale — spotting where big money moves, timing entries with precision, and managing risk like a professional. Taught step by step on real charts, from foundations to live trade breakdowns.",
+    "features": [
+      "Full video course — watch anytime, at your own pace",
+      "Whale-style market reading: find where big money is positioned",
+      "Entry timing, stop-loss placement and risk rules",
+      "Real-chart trade breakdowns and live examples",
+      "Lifetime access + free future updates"
+    ]
   }
 ]
