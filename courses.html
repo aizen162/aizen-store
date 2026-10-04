@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="theme-color" content="#0d0716">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us — Aizen Store</title>
-<meta name="description" content="Learn about Aizen Store — our mission to bring quality trading education and fitness gear to Pakistan.">
+<title>Courses — Aizen Store</title>
+<meta name="description" content="Aizen Store courses: trading courses by strategy (SMC, ICT, price action, supply & demand, SNR), gym courses and extra courses.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%237c3aed'/%3E%3Ctext x='50' y='70' font-size='60' text-anchor='middle' font-family='Arial' font-weight='bold' fill='%23ffffff'%3EA%3C/text%3E%3C/svg%3E">
 </head>
-<body data-page="about">
+<body data-page="courses">
 
 <header class="nav">
   <div class="container nav-inner">
@@ -20,7 +20,7 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
-      <div class="nav-drop"><a class="drop-toggle" href="courses.html">Courses ▾</a><div class="drop-menu"><a href="courses.html#trading">📈 Trading Courses</a><a href="courses.html#gym">🏋️ Gym Courses</a><a href="courses.html#extra">📦 Extra Courses</a></div></div>
+      <div class="nav-drop"><a class="drop-toggle active" href="courses.html">Courses ▾</a><div class="drop-menu"><a href="courses.html#trading">📈 Trading Courses</a><a href="courses.html#gym">🏋️ Gym Courses</a><a href="courses.html#extra">📦 Extra Courses</a></div></div>
       <a href="blog.html">Blog</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
@@ -34,29 +34,52 @@
 
 <div class="page-hero">
   <div class="container">
-    <span class="kicker">Our Story</span>
-    <h1>About Aizen Store</h1>
-    <p>Built by traders and lifters, for traders and lifters.</p>
+    <span class="kicker">Academy</span>
+    <h1>Our Courses</h1>
+    <p>Structured video courses that teach you a real skill — watch the first lesson free on every course, unlock the rest after enrolling on WhatsApp.</p>
   </div>
 </div>
 
-<section class="section">
-  <div class="container prose">
-    <h2>Why We Exist</h2>
-    <p>Aizen Store started with a simple frustration: quality trading education and gear were either overpriced, imported with crazy shipping fees, or just plain scams. We wanted a single place where someone in Pakistan could learn real trading skills, get practical digital tools, and buy gear for their desk and their workouts — without getting ripped off.</p>
-    <p>So we built it. Every course in our store is structured, practical and taught in plain language. Every digital product is something we use ourselves. Every physical product is quality-checked before it ships.</p>
-    <h2>What We Sell</h2>
-    <ul>
-      <li><strong>Digital products</strong> — ebooks, Notion templates, indicator packs and calculators with instant delivery.</li>
-      <li><strong>Trading courses</strong> — SMC, price action, risk management and crypto futures, from beginner to advanced.</li>
-      <li><strong>Trading gear</strong> — desk mats, posters, mugs and lamps to build a setup you're proud of.</li>
-      <li><strong>Gym gear</strong> — shakers, bands, belts and bags for training anywhere.</li>
-    </ul>
-    <h2>How Ordering Works</h2>
-    <p>Add products to your cart, fill in your delivery details, and confirm your order via WhatsApp with one tap. Physical products are shipped across Pakistan in 3–5 working days with <strong>cash on delivery</strong>. Digital products are delivered to your email right after your order is confirmed.</p>
-    <h2>Our Promise</h2>
-    <p>No hype, no "get rich quick" nonsense. Trading involves real risk, and we say so openly — that's why risk management is at the heart of everything we teach. If a product doesn't genuinely help you, we don't sell it.</p>
-    <p>Questions? Reach us anytime on the <a href="contact.html">contact page</a> — a real human replies.</p>
+<section class="section" style="padding-top:36px" id="trading">
+  <div class="container">
+    <div class="course-sec-head">
+      <div>
+        <span class="kicker">📈 Trading Courses</span>
+        <h2>Trade Like a Professional</h2>
+      </div>
+      <p class="result-count dim" id="trading-count"></p>
+    </div>
+    <p style="color:var(--muted);margin-bottom:14px">Pick your strategy — every course starts with a free lesson.</p>
+    <div class="filters" id="topic-chips" style="margin-bottom:22px"></div>
+    <div class="grid" id="trading-grid"></div>
+  </div>
+</section>
+
+<section class="section" id="gym" style="padding-top:10px">
+  <div class="container">
+    <div class="course-sec-head">
+      <div>
+        <span class="kicker">🏋️ Gym Courses</span>
+        <h2>Build the Physique</h2>
+      </div>
+      <p class="result-count dim" id="gym-count"></p>
+    </div>
+    <p style="color:var(--muted);margin-bottom:14px">Training programs, form guides and diet systems.</p>
+    <div class="grid" id="gym-grid"></div>
+  </div>
+</section>
+
+<section class="section" id="extra" style="padding-top:10px">
+  <div class="container">
+    <div class="course-sec-head">
+      <div>
+        <span class="kicker">📦 Extra Courses</span>
+        <h2>More Skills</h2>
+      </div>
+      <p class="result-count dim" id="extra-count"></p>
+    </div>
+    <p style="color:var(--muted);margin-bottom:14px">Business, freelancing, mindset and everything else we're cooking.</p>
+    <div class="grid" id="extra-grid"></div>
   </div>
 </section>
 
