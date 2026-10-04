@@ -10,15 +10,15 @@
 ------------------------------------------------------------ */
 const CONFIG = {
   whatsappNumber: "923335017388", // <-- User's WhatsApp Business number (set 2026-10-03)
-  currency: "Rs",
-  freeShippingOver: 5000,
-  shippingFee: 250,
+  currency: "$",
+  freeShippingOver: 18,
+  shippingFee: 0.9,
 };
 
 /* ---------------- helpers ---------------- */
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
-const fmt = (n) => CONFIG.currency + " " + Number(n).toLocaleString("en-PK");
+const fmt = (n) => "$" + Number(n).toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
 const esc = (s) =>
   String(s ?? "")
     .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
