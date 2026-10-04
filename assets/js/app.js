@@ -116,19 +116,23 @@ const TOPIC_LABELS = {
 function productCard(p) {
   const badge = p.badge ? `<span class="badge">${esc(p.badge)}</span>` : "";
   const oldP = p.oldPrice ? `<span class="old-price">${fmt(p.oldPrice)}</span>` : "";
+  const soldOut = p.available === false;
+  const cta = soldOut
+    ? `<button class="btn btn-sm btn-block" disabled style="opacity:.45;cursor:not-allowed">Unavailable</button>`
+    : `<button class="btn btn-sm btn-block" data-add="${esc(p.id)}">Add to Cart</button>`;
   return `
-  <div class="card">
+  <div class="card${soldOut ? " soldout" : ""}">
     <div class="card-img">
       <a href="product.html?id=${esc(p.id)}" aria-label="${esc(p.name)}">
         <img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">
-      </a>${badge}
+      </a>${badge}${soldOut ? `<span class="badge badge-soldout">Unavailable</span>` : ""}
     </div>
     <div class="card-body">
       <span class="card-cat">${esc(CAT_LABELS[p.category] || p.category)}</span>
       <h3 class="card-title"><a href="product.html?id=${esc(p.id)}">${esc(p.name)}</a></h3>
       <div class="rating">${stars(p.rating)} <span class="rcount">${p.rating} (${p.reviews})</span></div>
       <div class="price-row"><span class="price">${fmt(p.price)}</span>${oldP}</div>
-      <button class="btn btn-sm btn-block" data-add="${esc(p.id)}">Add to Cart</button>
+      ${cta}
     </div>
   </div>`;
 }
@@ -230,12 +234,15 @@ async function initProduct() {
             : `<div class="delivery-note">📦 <b>Cash on Delivery available</b> — ships across Pakistan in 3–5 working days. Shipping ${fmt(CONFIG.shippingFee)} · FREE on orders over ${fmt(CONFIG.freeShippingOver)}.</div>`}
           <div class="qty-row">
             <div class="qty"><button id="q-minus" aria-label="decrease">−</button><span id="q-val">1</span><button id="q-plus" aria-label="increase">+</button></div>
-            <button class="btn" id="pd-add" style="flex:1">Add to Cart</button>
+            ${p.available === false
+              ? `<button class="btn" id="pd-add" style="flex:1;opacity:.45;cursor:not-allowed" disabled>Unavailable</button>`
+              : `<button class="btn" id="pd-add" style="flex:1">Add to Cart</button>`}
           </div>
+          ${p.available === false ? `<div class="delivery-note" style="margin-top:12px">⏳ <b>Currently unavailable</b> — this item is out of stock right now. Check back soon.</div>` : ""}
           <div class="meta-list">
             <div><b>Category:</b> ${esc(CAT_LABELS[p.category] || p.category)}</div>
             <div><b>SKU:</b> AZ-${esc(p.id.toUpperCase())}</div>
-            <div><b>Availability:</b> ✅ In stock</div>
+            <div><b>Availability:</b> ${p.available === false ? "⏳ Unavailable" : "✅ In stock"}</div>
           </div>
         </div>
       </div>`;
