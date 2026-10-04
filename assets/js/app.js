@@ -98,9 +98,19 @@ function initFakeForms() {
 /* ---------------- product cards ---------------- */
 const CAT_LABELS = {
   digital: "Digital Product",
-  courses: "Trading Course",
+  "trading-courses": "Trading Course",
+  "gym-courses": "Gym Course",
+  "extra-courses": "Extra Course",
   "physical-trading": "Trading Gear",
   "physical-gym": "Gym Gear",
+};
+
+const TOPIC_LABELS = {
+  smc: "SMC",
+  ict: "ICT",
+  "price-action": "Price Action",
+  "supply-demand": "Supply Demand",
+  msnr: "MSNR",
 };
 
 function productCard(p) {
@@ -166,6 +176,7 @@ async function initShop() {
     const search = $("#shop-search");
     const params = new URLSearchParams(location.search);
     let activeCat = params.get("cat") || "all";
+    if (activeCat === "courses") activeCat = "trading-courses"; // legacy link
 
     $$(".filter-btn").forEach((b) => {
       if (b.dataset.cat === activeCat) b.classList.add("active");
@@ -202,7 +213,7 @@ async function initProduct() {
     const p = products.find((x) => x.id === id) || products[0];
     document.title = p.name + " — Aizen Store";
     const save = p.oldPrice ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
-    const isDigital = p.category === "digital" || p.category === "courses";
+    const isDigital = ["digital", "trading-courses", "gym-courses", "extra-courses"].includes(p.category);
     $("#product-detail").innerHTML = `
       <div class="pd">
         <div class="pd-img"><img src="${esc(p.image)}" alt="${esc(p.name)}"></div>
@@ -361,6 +372,38 @@ async function initPost() {
   } catch (e) { console.error(e); }
 }
 
+async function initCourses() {
+  try {
+    const products = await getJSON("assets/products.json");
+    const trading = products.filter((p) => p.category === "trading-courses");
+    const topics = ["all", ...Object.keys(TOPIC_LABELS)];
+    let activeTopic = "all";
+
+    function renderTrading() {
+      const chips = $("#topic-chips");
+      if (chips) {
+        chips.innerHTML = topics.map((t) =>
+          `<button class="filter-btn${t === activeTopic ? " active" : ""}" data-topic="${t}">${t === "all" ? "All strategies" : TOPIC_LABELS[t]}</button>`
+        ).join("");
+        $$("#topic-chips .filter-btn").forEach((b) =>
+          b.addEventListener("click", () => { activeTopic = b.dataset.topic; renderTrading(); })
+        );
+      }
+      const list = trading.filter((p) => activeTopic === "all" || p.topic === activeTopic);
+      const grid = $("#trading-grid"), count = $("#trading-count");
+      if (count) count.textContent = `${list.length} course${list.length === 1 ? "" : "s"}`;
+      if (grid) {
+        grid.innerHTML = list.length
+          ? list.map(productCard).join("")
+          : `<div class="empty-state"><div class="big">🎓</div><h3>No courses here yet</h3><p>Courses for this strategy are being recorded — check back soon.</p></div>`;
+        bindAddButtons(grid);
+      }
+    }
+
+    renderTrading();
+  } catch (e) { console.error(e); }
+}
+
 /* ---------------- boot ---------------- */
 document.addEventListener("DOMContentLoaded", () => {
   initNav();
@@ -368,6 +411,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const page = document.body.dataset.page;
   if (page === "home") initHome();
   if (page === "shop") initShop();
+  if (page === "courses") initCourses();
   if (page === "product") initProduct();
   if (page === "cart") initCart();
   if (page === "blog") initBlog();
