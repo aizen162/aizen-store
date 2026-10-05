@@ -390,5 +390,27 @@
     ],
     "previewVideo": "https://drive.google.com/file/d/11xcqXoUKx3dUyL8b6aAHndTWUXB2kG8n/preview",
     "topic": "ict"
+  },
+  {
+    "id": "p19",
+    "name": "Guardeer Fractal Nature — Complete Trading Course",
+    "slug": "guardeer-fractal-nature",
+    "category": "trading-courses",
+    "price": 9.99,
+    "oldPrice": 19.99,
+    "rating": 5.0,
+    "reviews": 12,
+    "badge": "New",
+    "image": "assets/img/p19.jpg",
+    "description": "Guardeer Fractal Nature is the founder's complete 5-lecture video trading course — how fractal market structure really moves price, taught on real charts. Watch Lecture 1 free right on this page; the remaining 4 lectures unlock after you enroll on WhatsApp.",
+    "features": [
+      "▶️ Lecture 1 (FREE preview — watch above)",
+      "🔒 Lecture 2",
+      "🔒 Lecture 3",
+      "🔒 Lecture 4",
+      "🔒 Lecture 5"
+    ],
+    "previewVideo": "https://drive.google.com/file/d/1d56Rnlk08T-hS9HcoXCY5iRk5hFMdkeq/preview",
+    "topic": "ict"
   }
 ]
