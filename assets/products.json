@@ -478,5 +478,26 @@
     ],
     "previewVideo": "https://drive.google.com/file/d/13_kaiK9cnXJC0sjYllFfKXfXa7bsGV-I/preview",
     "topic": "msnr"
+  },
+  {
+    "id": "p22",
+    "name": "Guardeer September Batch",
+    "slug": "guardeer-september-batch",
+    "category": "trading-courses",
+    "price": 4.99,
+    "badge": "New",
+    "rating": 5.0,
+    "reviews": 0,
+    "image": "assets/img/p22.jpg",
+    "description": "Guardeer September Batch: live market analysis streams — watch real market breakdowns session by session, as they happened live. Watch Lecture 1 free right on this page; Lectures 2–5 unlock after you enroll on WhatsApp.",
+    "features": [
+      "▶️ Lecture 1 (FREE preview — watch above)",
+      "🔒 Lecture 2",
+      "🔒 Lecture 3",
+      "🔒 Lecture 4",
+      "🔒 Lecture 5"
+    ],
+    "previewVideo": "https://drive.google.com/file/d/1YkvjKoaA7MTbjEhVS1K4mS-3hhd7b-ay/preview",
+    "topic": "ict"
   }
 ]
