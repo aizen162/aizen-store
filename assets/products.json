@@ -449,5 +449,34 @@
     ],
     "previewVideo": "https://drive.google.com/file/d/1fgpXezk5hhZ0RcMtgpcHRAD5YqViojbr/preview",
     "topic": "price-action"
+  },
+  {
+    "id": "p21",
+    "name": "SxS LSNR Course Advanced MSNR",
+    "slug": "sxs-advanced-msnr-course",
+    "category": "trading-courses",
+    "price": 9.99,
+    "badge": "New",
+    "rating": 5.0,
+    "reviews": 0,
+    "image": "assets/img/p21.jpg",
+    "description": "SxS Advanced MSNR course: 13 lectures on sniper entries — market structure, liquidity, risk management and live trade breakdowns, step by step. Watch Lecture 1 free right on this page; Lectures 2–13 unlock after you enroll on WhatsApp.",
+    "features": [
+      "▶️ Lecture 1 (FREE preview — watch above)",
+      "🔒 Lecture 2",
+      "🔒 Lecture 3",
+      "🔒 Lecture 4",
+      "🔒 Lecture 5",
+      "🔒 Lecture 6",
+      "🔒 Lecture 7",
+      "🔒 Lecture 8",
+      "🔒 Lecture 9",
+      "🔒 Lecture 10",
+      "🔒 Lecture 11",
+      "🔒 Lecture 12",
+      "🔒 Lecture 13"
+    ],
+    "previewVideo": "https://drive.google.com/file/d/13_kaiK9cnXJC0sjYllFfKXfXa7bsGV-I/preview",
+    "topic": "msnr"
   }
 ]
