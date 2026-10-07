@@ -119,3 +119,4 @@ The cart checkout composes the order message and opens `wa.me/<number>`.
 
 All colors live in `:root` at the top of `assets/css/style.css`.
 Change `--gold` (primary purple), `--bg`, `--text` etc. — the whole site follows.
+<!-- deploy trigger -->
