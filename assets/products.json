@@ -50,7 +50,7 @@
       "Liquidity sweep + BOS/CHOCH auto-markers",
       "Premium/discount zone painter",
       "Position size & SL calculator overlay",
-      "🔒 Private Drive folder — download link sent on WhatsApp after payment is confirmed; never posted publicly", 
+      "🔒 Private Drive folder — download link sent on WhatsApp after payment is confirmed; never posted publicly",
       "Setup guide PDF + update support"
     ],
     "id": "p03",
@@ -71,7 +71,6 @@
       "Forex, Gold (XAUUSD) & indices supported",
       "Max-risk-per-day tracker built in",
       "Drawdown warning alerts",
-      "🔒 Private Drive file — download link sent on WhatsApp after payment is confirmed; never posted publicly",
       "Beginner-friendly instructions tab"
     ],
     "id": "p04",
@@ -416,5 +415,23 @@
     ],
     "previewVideo": "https://drive.google.com/file/d/1d56Rnlk08T-hS9HcoXCY5iRk5hFMdkeq/preview",
     "topic": "ict"
+  },
+  {
+    "id": "p20",
+    "name": "Waqar Zaka Crypto Course",
+    "slug": "waqar-zaka-crypto-course",
+    "category": "trading-courses",
+    "price": 4.99,
+    "badge": "New",
+    "rating": 5.0,
+    "reviews": 0,
+    "image": "assets/img/p20.jpg",
+    "description": "Waqar Zaka's crypto trading course: learn crypto trading step by step, from the basics to real market application. Watch Lecture 1 free right on this page; Lecture 2 unlocks after you enroll on WhatsApp.",
+    "features": [
+      "▶️ Lecture 1 (FREE preview — watch above)",
+      "🔒 Lecture 2"
+    ],
+    "previewVideo": "https://drive.google.com/file/d/1fgpXezk5hhZ0RcMtgpcHRAD5YqViojbr/preview",
+    "topic": "price-action"
   }
 ]
