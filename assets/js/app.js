@@ -111,6 +111,7 @@ const TOPIC_LABELS = {
   "price-action": "Price Action",
   "supply-demand": "Supply Demand",
   msnr: "MSNR",
+  crt: "CRT",
 };
 
 function productCard(p) {
