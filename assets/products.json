@@ -499,5 +499,33 @@
     ],
     "previewVideo": "https://drive.google.com/file/d/1YkvjKoaA7MTbjEhVS1K4mS-3hhd7b-ay/preview",
     "topic": "ict"
+  },
+  {
+    "id": "p23",
+    "name": "CRT Unlocked by Romeo CRT",
+    "slug": "crt-unlocked-by-romeo",
+    "category": "trading-courses",
+    "price": 9.99,
+    "badge": "New",
+    "rating": 5.0,
+    "reviews": 0,
+    "image": "assets/img/p23.jpg",
+    "description": "CRT Unlocked by Romeo CRT — the full CRT guide from A to Z: how to know where price is going, secret CRT techniques, and the final exam with CRT certification. Watch Lecture 1 free right on this page; Lectures 2–12 unlock after you enroll on WhatsApp.",
+    "features": [
+      "▶️ Lecture 1 (FREE preview — watch above)",
+      "🔒 Lecture 2",
+      "🔒 Lecture 3",
+      "🔒 Lecture 4",
+      "🔒 Lecture 5",
+      "🔒 Lecture 6",
+      "🔒 Lecture 7",
+      "🔒 Lecture 8",
+      "🔒 Lecture 9",
+      "🔒 Lecture 10",
+      "🔒 Lecture 11",
+      "🔒 Lecture 12"
+    ],
+    "previewVideo": "https://drive.google.com/file/d/1lTqkF1K1FIN-45SIZKi8ZfyAVDK5zBLH/preview",
+    "topic": "crt"
   }
 ]
