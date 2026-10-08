@@ -228,7 +228,7 @@ async function initProduct() {
           <div class="pd-rating"><span class="rating">${stars(p.rating)}</span><span>${p.rating} · ${p.reviews} reviews</span></div>
           <div class="pd-price"><span class="price">${fmt(p.price)}</span>${p.oldPrice ? `<span class="old-price">${fmt(p.oldPrice)}</span><span class="save-tag">SAVE ${save}%</span>` : ""}</div>
           <p class="pd-desc">${esc(p.description)}</p>
-          ${p.previewVideo ? `<div class="preview-wrap"><h3>🎬 Free preview — Lesson 1</h3><div class="video-frame"><iframe src="${esc(p.previewVideo)}" allow="autoplay; encrypted-media" allowfullscreen loading="lazy" title="Free preview"></iframe></div></div>` : ""}
+          ${p.previewVideo ? `<div class="preview-wrap"><h3>🎬 Free preview — ${p.category === "gym-courses" ? "Module" : "Lesson"} 1</h3><div class="video-frame"><iframe src="${esc(p.previewVideo)}" allow="autoplay; encrypted-media" allowfullscreen loading="lazy" title="Free preview"></iframe></div></div>` : ""}
           <ul class="pd-features">${p.features.map((f) => { const locked = f.startsWith("🔒"); const t = locked ? f.replace(/^🔒\s*/, "") : f; return `<li class="${locked ? "locked" : ""}">${esc(t)}</li>`; }).join("")}</ul>
           ${isDigital
             ? `<div class="delivery-note">⚡ <b>Instant digital delivery</b> — download link + access details are shared with you on WhatsApp right after your order is confirmed.</div>`
@@ -409,6 +409,16 @@ async function initCourses() {
     }
 
     renderTrading();
+
+    const gym = products.filter((p) => p.category === "gym-courses");
+    const gymGrid = $("#gym-grid"), gymCount = $("#gym-count");
+    if (gymCount) gymCount.textContent = `${gym.length} course${gym.length === 1 ? "" : "s"}`;
+    if (gymGrid) {
+      gymGrid.innerHTML = gym.length
+        ? gym.map(productCard).join("")
+        : `<div class="empty-state"><div class="big">💪</div><h3>No courses here yet</h3><p>Gym courses are on the way — check back soon.</p></div>`;
+      bindAddButtons(gymGrid);
+    }
   } catch (e) { console.error(e); }
 }
 
