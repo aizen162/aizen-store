@@ -527,5 +527,98 @@
     ],
     "previewVideo": "https://drive.google.com/file/d/1lTqkF1K1FIN-45SIZKi8ZfyAVDK5zBLH/preview",
     "topic": "crt"
+  },
+  {
+    "id": "p24",
+    "name": "Gym Fundamentals: Form & Technique Masterclass",
+    "slug": "gym-form-technique-masterclass",
+    "category": "gym-courses",
+    "price": 1.99,
+    "badge": "New",
+    "rating": 5.0,
+    "reviews": 0,
+    "image": "assets/img/p24.jpg",
+    "description": "Master the five big lifts rep by rep: squat, bench, deadlift, overhead press and rows — plus warm-up, mobility and the mistake checklist. Read Module 1 free right on this page; Modules 2–7 unlock after you enroll on WhatsApp.",
+    "features": [
+      "▶️ Module 1 (FREE preview — read above)",
+      "🔒 Module 2 — The Squat",
+      "🔒 Module 3 — The Bench Press",
+      "🔒 Module 4 — The Deadlift",
+      "🔒 Module 5 — Overhead Press & Rows",
+      "🔒 Module 6 — Warm-Up & Mobility Routine",
+      "🔒 Module 7 — The Mistake Checklist",
+      "🔒 Private PDF — full course sent on WhatsApp after payment is confirmed; never posted publicly"
+    ],
+    "previewVideo": "https://drive.google.com/file/d/1rYrNZCqHHhsj2w6jfuHEEsTJgx-7Vdwg/preview"
+  },
+  {
+    "id": "p25",
+    "name": "Muscle-Building Diet & Nutrition Blueprint",
+    "slug": "gym-diet-nutrition-blueprint",
+    "category": "gym-courses",
+    "price": 1.99,
+    "badge": "New",
+    "rating": 5.0,
+    "reviews": 0,
+    "image": "assets/img/p25.jpg",
+    "description": "Eat like you train: calories, protein math, Pakistani-kitchen foods, bulking vs cutting, meal timing, the honest supplement guide and two sample meal plans. Read Module 1 free right on this page; Modules 2–8 unlock after you enroll on WhatsApp.",
+    "features": [
+      "▶️ Module 1 (FREE preview — read above)",
+      "🔒 Module 2 — Protein: The Muscle Math",
+      "🔒 Module 3 — Carbs, Fats & Micros",
+      "🔒 Module 4 — The Pakistani Kitchen Guide",
+      "🔒 Module 5 — Bulking vs Cutting",
+      "🔒 Module 6 — Meal Timing & Hydration",
+      "🔒 Module 7 — Supplements: The Honest Guide",
+      "🔒 Module 8 — Sample Meal Plans",
+      "🔒 Private PDF — full course sent on WhatsApp after payment is confirmed; never posted publicly"
+    ],
+    "previewVideo": "https://drive.google.com/file/d/1YhPgfCjtrW0ny5A2XiT8aA_9-gi1YyQ_/preview"
+  },
+  {
+    "id": "p26",
+    "name": "Training Splits & Timing System",
+    "slug": "gym-splits-timing-system",
+    "category": "gym-courses",
+    "price": 1.99,
+    "badge": "New",
+    "rating": 5.0,
+    "reviews": 0,
+    "image": "assets/img/p26.jpg",
+    "description": "The right program for your schedule: splits compared, time-of-day training, rest periods, the progressive overload system, deloads and two complete sample programs. Read Module 1 free right on this page; Modules 2–7 unlock after you enroll on WhatsApp.",
+    "features": [
+      "▶️ Module 1 (FREE preview — read above)",
+      "🔒 Module 2 — Pick Your Split (Decision Guide)",
+      "🔒 Module 3 — Workout Timing: Time of Day",
+      "🔒 Module 4 — Rest Periods Between Sets",
+      "🔒 Module 5 — Progressive Overload System",
+      "🔒 Module 6 — Deload & Recovery Weeks",
+      "🔒 Module 7 — Sample Programs",
+      "🔒 Private PDF — full course sent on WhatsApp after payment is confirmed; never posted publicly"
+    ],
+    "previewVideo": "https://drive.google.com/file/d/1XnLh9UKMnWio2pQL2svsY-on9ZI87wO4/preview"
+  },
+  {
+    "id": "p27",
+    "name": "Gym Psychology: Discipline & Consistency Code",
+    "slug": "gym-psychology-consistency-code",
+    "category": "gym-courses",
+    "price": 1.99,
+    "badge": "New",
+    "rating": 5.0,
+    "reviews": 0,
+    "image": "assets/img/p27.jpg",
+    "description": "The mental game: beating the motivation trap, habit design, plateaus, gym anxiety, tracking beyond the mirror, sleep, and a 90-day identity plan. Read Module 1 free right on this page; Modules 2–7 unlock after you enroll on WhatsApp.",
+    "features": [
+      "▶️ Module 1 (FREE preview — read above)",
+      "🔒 Module 2 — Habit Design: The System",
+      "🔒 Module 3 — Plateaus: The Flat Months",
+      "🔒 Module 4 — Gym Anxiety",
+      "🔒 Module 5 — Tracking Progress (Beyond the Mirror)",
+      "🔒 Module 6 — Sleep & Recovery Mindset",
+      "🔒 Module 7 — The 90-Day Identity Plan",
+      "🔒 Private PDF — full course sent on WhatsApp after payment is confirmed; never posted publicly"
+    ],
+    "previewVideo": "https://drive.google.com/file/d/1yjEwtYxVjLFoSXrsDPQxuoidFWNRnH4s/preview"
   }
 ]
