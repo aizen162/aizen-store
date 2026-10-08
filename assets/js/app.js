@@ -419,6 +419,21 @@ async function initCourses() {
         : `<div class="empty-state"><div class="big">💪</div><h3>No courses here yet</h3><p>Gym courses are on the way — check back soon.</p></div>`;
       bindAddButtons(gymGrid);
     }
+
+    const toggle = $("#course-toggle");
+    if (toggle) {
+      const tradingSec = $("#trading"), gymSec = $("#gym");
+      toggle.querySelectorAll(".filter-btn").forEach((b) =>
+        b.addEventListener("click", () => {
+          toggle.querySelectorAll(".filter-btn").forEach((x) => x.classList.remove("active"));
+          b.classList.add("active");
+          const showGym = b.dataset.view === "gym";
+          if (tradingSec) tradingSec.style.display = showGym ? "none" : "";
+          if (gymSec) gymSec.style.display = showGym ? "" : "none";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        })
+      );
+    }
   } catch (e) { console.error(e); }
 }
 
