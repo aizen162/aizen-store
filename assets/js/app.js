@@ -457,7 +457,7 @@ document.addEventListener("DOMContentLoaded", () => {
   var WA_COMMUNITY_URL = "https://chat.whatsapp.com/GRDfEQUgJMSIQ7TZ8tCn03"; /* WhatsApp community invite */
   function svgIG(){return '<svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-9.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg>';}
   function svgWA(){return '<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.2-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.4-.2z"/></svg>';}
-  var html = '<div class="soc-wrap"><canvas class="soc-particles" width="132" height="132"></canvas>'
+  var html = '<div class="soc-wrap">'
     + '<a class="soc-btn ig" href="'+IG_URL+'" target="_blank" rel="noopener" aria-label="Instagram">'+svgIG()+'</a>'
     + '<span class="soc-tip">Follow on Instagram</span></div>';
   if(WA_COMMUNITY_URL){
@@ -469,25 +469,4 @@ document.addEventListener("DOMContentLoaded", () => {
   rail.className = "social-rail";
   rail.innerHTML = html;
   document.body.appendChild(rail);
-  var colors = ["#ff5e9c","#b06bff","#ffd166","#9d6bff","#ee2a7b"];
-  Array.prototype.forEach.call(document.querySelectorAll(".soc-particles"), function(cv){
-    var ctx = cv.getContext("2d"), W = 132, H = 132;
-    var ps = [];
-    for(var i=0;i<24;i++){ps.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5-.25,r:Math.random()*2.2+.8,c:colors[(Math.random()*colors.length)|0],a:Math.random()*6.28});}
-    var run = true;
-    document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)tick();});
-    (function tick(){
-      if(!run) return;
-      ctx.clearRect(0,0,W,H);
-      for(var j=0;j<ps.length;j++){var p=ps[j];
-        p.x+=p.vx;p.y+=p.vy;p.a+=.05;
-        if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
-        ctx.globalAlpha=(.35+.65*Math.abs(Math.sin(p.a)))*.9;
-        ctx.fillStyle=p.c;ctx.shadowColor=p.c;ctx.shadowBlur=8;
-        ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,7);ctx.fill();
-      }
-      ctx.globalAlpha=1;ctx.shadowBlur=0;
-      requestAnimationFrame(tick);
-    })();
-  });
 })();
