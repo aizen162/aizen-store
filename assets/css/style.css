@@ -397,3 +397,18 @@ footer{border-top:1px solid var(--border);background:var(--bg-soft);margin-top:0
   .ci-right{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center}
   .hero::after{font-size:11rem;right:-30px}
 }
+
+/* ============ Floating social rail (Instagram + WhatsApp community) ============ */
+.social-rail{position:fixed;right:16px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:16px;z-index:9999}
+.soc-wrap{position:relative;width:56px;height:56px}
+.soc-particles{position:absolute;left:50%;top:50%;width:132px;height:132px;transform:translate(-50%,-50%);pointer-events:none}
+.soc-btn{position:relative;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(20,12,36,.88);backdrop-filter:blur(6px);text-decoration:none;transition:transform .25s ease;cursor:pointer}
+.soc-btn:hover{transform:scale(1.14)}
+.soc-btn svg{width:28px;height:28px;fill:#fff}
+.soc-btn.ig{border:2px solid transparent;background:linear-gradient(#1a1030,#1a1030) padding-box,linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7) border-box;animation:igGlow 2.6s ease-in-out infinite}
+@keyframes igGlow{0%,100%{box-shadow:0 0 12px rgba(238,42,123,.55),0 0 34px rgba(157,107,255,.35)}50%{box-shadow:0 0 24px rgba(238,42,123,.9),0 0 58px rgba(157,107,255,.65)}}
+.soc-btn.wa{border:2px solid #25d366;animation:waGlow 2.6s ease-in-out infinite}
+@keyframes waGlow{0%,100%{box-shadow:0 0 12px rgba(37,211,102,.5),0 0 30px rgba(37,211,102,.25)}50%{box-shadow:0 0 26px rgba(37,211,102,.95),0 0 52px rgba(37,211,102,.5)}}
+.soc-tip{position:absolute;right:66px;top:50%;transform:translateY(-50%) translateX(8px);background:#1a1030;border:1px solid var(--border);color:var(--silver);font-size:12px;font-weight:600;padding:6px 12px;border-radius:20px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease}
+.soc-wrap:hover .soc-tip{opacity:1;transform:translateY(-50%) translateX(0)}
+@media(max-width:640px){.social-rail{right:10px}.soc-wrap{width:48px;height:48px}.soc-btn{width:48px;height:48px}.soc-btn svg{width:24px;height:24px}.soc-particles{width:112px;height:112px}}
